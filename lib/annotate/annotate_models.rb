@@ -262,7 +262,8 @@ module AnnotateModels
               end
               current_col_key = line.split[1] # first word in line after the # sign
               current_col = ''
-            elsif !current_col_key.nil? && line.start_with?('#') && line.strip != '#'
+            elsif !current_col_key.nil? && line.start_with?('##') &&
+                line.strip != '#' && line.strip != '##'
               current_col << line
             end
           end
