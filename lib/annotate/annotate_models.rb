@@ -223,7 +223,7 @@ module AnnotateModels
         old_header = old_content.match(header_pattern).to_s
         new_header = info_block.header
 
-        column_pattern = /^#[\t ]+\w+[\t ]+.+$/
+        column_pattern = /^#[\t ]+\w+[\t ]+:.+$/
 
         encoding = Regexp.new(/(^#\s*encoding:.*\n)|(^# coding:.*\n)|(^# -\*- coding:.*\n)/)
         encoding_header = old_content.match(encoding).to_s
